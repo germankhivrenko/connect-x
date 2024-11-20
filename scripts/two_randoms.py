@@ -9,7 +9,7 @@ def main():
     random_2 = Random("random_2", Token(2))
     config = ConnectXConfig()
     runner = GameRunner(config, agents=[random_1, random_2])
-    suite = GameSuite(runner, 10000)
+    suite = GameSuite(runner, 100)
 
     stats = suite.run()
 

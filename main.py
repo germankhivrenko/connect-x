@@ -1,2 +1,3 @@
 if __name__ == "__main__":
-    pass
+    user_input = input("Enter position: ")
+    print(f"You choosed: {user_input}")

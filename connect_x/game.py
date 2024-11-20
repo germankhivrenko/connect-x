@@ -27,6 +27,9 @@ class Token:
     def __hash__(self):
         return hash(self._color)
 
+    def __str__(self):
+        return str(self._color)
+
 
 # TODO: check best practices
 class NonEmptyCell(Exception):
@@ -125,6 +128,7 @@ class Game:
     def __init__(self, config: ConnectXConfig) -> None:
         self._config = config
         # TODO: Point based grid
+        # TODO: change logic where (0, 0) is top left point
         self._grid = [[Cell() for _ in range(config.width)] for _ in range(config.height)]
         self._lowest_empty = [0] * config.width
         self._winner: Token | None = None
